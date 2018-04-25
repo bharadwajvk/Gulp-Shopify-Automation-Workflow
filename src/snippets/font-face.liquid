@@ -1,0 +1,20 @@
+{% comment %}
+------------------------------------------------------------------------------
+Font Face
+------------------------------------------------------------------------------
+{% endcomment %}
+
+{% assign font1_declaration = 'Rubik' %}
+{% assign font1_file_name = 'Rubik-MediumItalic' %}
+
+@font-face {
+    font-family: '{{ font1_declaration }}'; /* IE9 Compat Modes */
+    src: url('{{ font1_file_name | append: '.eot' | asset_url }}');
+    src: url('{{ font1_file_name | append: '.eot' | asset_url }}#iefix') format("embedded-opentype"), /* IE6-IE8 */
+        url('{{ font1_file_name | append: '.woff' | asset_url }}') format("woff"), /* Pretty Modern Browsers */
+        url('{{ font1_file_name | append: '.woff2' | asset_url }}') format("woff2"), /* Super Modern Browsers */
+        url('{{ font1_file_name | append: '.ttf' | asset_url }}') format("truetype"), /* Safari, Android, iOS */
+        url('{{ font1_file_name | append: '.svg' | asset_url }}#timber-icons') format("svg"); /* iOS */
+    font-weight: 500;
+    font-style: italic;
+};
